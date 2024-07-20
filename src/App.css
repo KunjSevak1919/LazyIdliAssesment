@@ -1,38 +1,146 @@
+
+
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  background: url('/Users/kunj/Desktop/LazyIdli/LazyIdliAssesment/my-leaderboard1/public/image 65 (1).png') no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: rgba(215, 18, 18, 0.8); /* Semi-transparent to blend with background */
+  min-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
+  color: rgb(255, 255, 255);
+}
+
+.leaderboard {
+  margin: 20px auto;
+  width: 80%;
+  background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.leaderboard table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.leaderboard th, .leaderboard td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.leaderboard th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #03a409;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* .popup-inner {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+} */
+
+.popup-inner {
+  background: rgb(169, 164, 164);
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  width: 80%;
+  max-width: 500px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: slideIn 0.3s ease-in-out;
+}
+
+input {
+  width: calc(100% - 22px);
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #b4d708;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+
+/* .footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #00246b;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  animation: scroll 10s linear infinite;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+} */
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color:rgb(64, 43, 226);
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.footer p {
+  display: inline-block;
+  padding-left: 100%;
+  animation: scrollLeft 10s linear infinite;
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(100%);
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    transform: translateX(-100%);
   }
 }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+  }
+  to {
+    transform: translateY(0);
+  }
+} 
